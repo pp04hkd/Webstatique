@@ -1,0 +1,60 @@
+Index.html :
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvre ton métier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Trouve le métier qui te correspond</h1>
+        <p>Réponds à quelques questions et découvre des métiers qui te correspondent</p>
+    </header>
+ 
+    <form id="questionnaire">
+        <div>
+            <label for="question1">Préférez-vous travailler à l'intérieur ou à l'extérieur ?</label>
+            <select id="question1" name="question1">
+                <option value="">Sélectionnez</option>
+                <option value="interieur">Intérieur</option>
+                <option value="exterieur">Extérieur</option>
+            </select>
+        </div>
+ 
+        <div>
+            <label for="question2">Aimez-vous travailler seul ou en équipe ?</label>
+            <select id="question2" name="question2">
+                <option value="">Sélectionnez</option>
+                <option value="seul">Seul</option>
+                <option value="equipe">En équipe</option>
+            </select>
+        </div>
+ 
+        <div>
+            <label for="question3">Préfères-tu travailler avec des machines ou des gens ?</label>
+            <select id="question3" name="question3">
+                <option value="">Sélectionnez</option>
+                <option value="machines">Machines</option>
+                <option value="gens">Gens</option>
+            </select>
+        </div>
+ 
+        <button type="button" onclick="genererSuggestions()">Voir les résultats</button>
+    </form>
+ 
+    <section id="suggestions" style="display: none;">
+        <h2>Métiers qui pourraient vous intéresser :</h2>
+        <ul id="metier-list"></ul>
+    </section>
+ 
+    <section id="details" style="display: none;">
+        <h2 id="metier-nom"></h2>
+        <div id="metier-details"></div>
+        <a href="#" onclick="retourAccueil()">Retour à l'accueil</a>
+    </section>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
